@@ -1,0 +1,44 @@
+experiment_name: fairskew-gcn
+seed: 42
+device: auto
+epochs: 150
+embedding_dim: 32
+num_layers: 2
+learning_rate: 0.001
+regularization: 0.0001
+rating_threshold: 4.0
+split: [0.8, 0.1, 0.1]
+evaluation_ks: [10, 20, 30]
+validation_interval: 10
+checkpoint_interval: 25
+edge_drop_rho: 0.25
+skew_smoothing: 1.0
+contrastive_temperature: 0.2
+contrastive_coefficient: 0.1
+contrastive_batch_size: 1024
+group_dro_eta: 0.05
+enable_augmentation: true
+enable_contrastive: true
+enable_group_dro: true
+inference_graph: full
+fairness_metric_variant: divergence  # divergence (current) or distance (prior FairIB/UGRec compatibility)
+final_test_evaluation: true
+selection_metric: NDCG@30
+enable_exposure_fairness: false
+exposure_dp_coefficient: 0.0
+exposure_eo_coefficient: 0.0
+exposure_batch_size: 512
+exposure_temperature: 1.0
+fairness_warmup_epochs: 1
+rerank_strength: 0.0
+rerank_pool_size: 100
+rerank_common_relevance: false
+rerank_eo_proxy_strength: 0.0
+enable_ego_adversary: false
+adversarial_coefficient: 0.0
+adversary_learning_rate: 0.001
+adversary_hidden_dim: null
+data_dir: data
+output_dir: outputs
+resume: null
+

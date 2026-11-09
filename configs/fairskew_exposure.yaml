@@ -1,0 +1,9 @@
+defaults: configs/fairskew_selected.yaml
+experiment_name: fairskew-gcn-exposure
+enable_exposure_fairness: true
+exposure_dp_coefficient: 0.5
+exposure_eo_coefficient: 0.5
+exposure_batch_size: 512
+exposure_temperature: 1.0
+rerank_strength: 0.30
+rerank_pool_size: 100

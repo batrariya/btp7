@@ -1,0 +1,12 @@
+defaults: configs/fairskew_selected.yaml
+experiment_name: fairskew-gcn-fairslate
+# Module D: direct, sharp exposure alignment on training data only.
+enable_exposure_fairness: true
+exposure_dp_coefficient: 10.0
+exposure_eo_coefficient: 2.0
+exposure_batch_size: 1024
+exposure_temperature: 0.10
+fairness_warmup_epochs: 20
+# Global target-exposure optimizer; scores remain the utility component.
+rerank_strength: 0.30
+rerank_pool_size: 300

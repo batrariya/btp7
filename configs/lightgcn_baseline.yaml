@@ -1,0 +1,5 @@
+defaults: configs/movielens1m.yaml
+experiment_name: lightgcn-baseline
+enable_augmentation: false
+enable_contrastive: false
+enable_group_dro: false

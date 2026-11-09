@@ -1,0 +1,6 @@
+defaults: configs/fairskew_literature.yaml
+experiment_name: fairskew-gcn-common-support
+# Explicit group-aware, training-only common-support slate policy.
+rerank_strength: 0.55
+rerank_pool_size: 500
+rerank_common_relevance: true

@@ -1,0 +1,11 @@
+defaults: configs/movielens1m.yaml
+experiment_name: fairskew-gcn-tuned
+embedding_dim: 32
+learning_rate: 0.01
+regularization: 0.0000001
+edge_drop_rho: 0.40
+contrastive_coefficient: 0.02
+contrastive_temperature: 0.20
+group_dro_eta: 0.10
+fairness_metric_variant: distance
+final_test_evaluation: true

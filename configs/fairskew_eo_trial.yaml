@@ -1,0 +1,12 @@
+defaults: configs/fairskew_fairsate.yaml
+experiment_name: fairskew-gcn-eo-trial
+# Validation-only selection trial: stronger, lower-variance EO surrogate.
+epochs: 75
+final_test_evaluation: false
+exposure_dp_coefficient: 10.0
+exposure_eo_coefficient: 8.0
+exposure_batch_size: 6040
+exposure_temperature: 0.10
+# EO proxy is not selected: validation showed it did not improve EO.
+rerank_strength: 0.0
+rerank_eo_proxy_strength: 0.0

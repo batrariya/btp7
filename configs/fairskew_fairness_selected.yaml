@@ -1,0 +1,7 @@
+defaults: configs/fairskew_fairsate.yaml
+experiment_name: fairskew-gcn-fairness-selected
+# Selected on validation: model-level fairness only. Slate reranking improved
+# DP but raised EO, so it is disabled for the final quality/fairness policy.
+rerank_strength: 0.0
+rerank_common_relevance: false
+rerank_eo_proxy_strength: 0.0

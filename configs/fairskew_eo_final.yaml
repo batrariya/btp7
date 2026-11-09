@@ -1,0 +1,6 @@
+defaults: configs/fairskew_eo_trial.yaml
+experiment_name: fairskew-gcn-eo-balanced-rejected
+# Rejected after validation: this aggressive EO setting reduced utility below
+# the configured floor. Retained as an auditable trial, not a final recipe.
+epochs: 150
+final_test_evaluation: false

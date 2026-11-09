@@ -1,0 +1,4 @@
+defaults: configs/default.yaml
+dataset: movielens1m
+dataset_url: https://files.grouplens.org/datasets/movielens/ml-1m.zip
+

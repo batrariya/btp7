@@ -1,0 +1,17 @@
+defaults: configs/fairskew_selected.yaml
+experiment_name: fairskew-gcn-literature
+# FairGo-inspired node + ego-graph sensitive-information removal.
+enable_ego_adversary: true
+adversarial_coefficient: 0.05
+adversary_learning_rate: 0.001
+adversary_hidden_dim: 32
+# Moderate direct exposure terms preserve utility; all use training data only.
+enable_exposure_fairness: true
+exposure_dp_coefficient: 1.0
+exposure_eo_coefficient: 0.5
+exposure_batch_size: 1024
+exposure_temperature: 0.20
+fairness_warmup_epochs: 20
+# Shared-target global slate constraint, selected conservatively for utility.
+rerank_strength: 0.15
+rerank_pool_size: 300
